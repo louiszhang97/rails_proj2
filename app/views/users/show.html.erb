@@ -1,0 +1,19 @@
+<div class="show-wrapper">
+    <img class="image" src=<%= @user.image_url %> />
+    <div class= "username"><%= @user.username%></div>
+</div>
+<div class="user-reviews-wrapper">
+    <div class="header">Reviews</div>
+    <% @user.reviews.each do |review| %>
+        <div class="review">
+            <div class="top">
+                <div class= "prod-name"><%= review.product.name %></div>
+                <div class= "prod-owner"><%= review.product.owner %></div>
+                <%= link_to "View Product", product_path(review.product), class: "view-product" %>
+            </div>
+            <div class="bottom">
+                <div class= "comment"><%= review.comment %></div>
+            </div>
+        </div>
+    <% end %>
+</div>

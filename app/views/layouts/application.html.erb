@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <% if !(yield(:title).empty?) %>
+        <% title = yield(:title) %>
+        <%= title + ' | Catalog' %>
+      <% else %>
+        <%= 'Catalog' %>
+      <% end %>
+    </title>
+    <meta name='brand-color' content='#ffc564'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <%= render 'layouts/navbar' %>
+
+    <div id="container">
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+
+  </body>
+</html> 

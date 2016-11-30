@@ -1,0 +1,10 @@
+<div class="product">
+    <div class="top">
+        <div class="name"><%= product.name %></div>
+        <div class="owner"><%= product.owner %></div>
+        <div class="description"><%= product.description %></div>
+    </div>
+    <div class="bottom">
+        <%= link_to "View Reviews", product_path(product), class: "reviews" %>
+    </div>
+</div>

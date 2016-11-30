@@ -1,0 +1,9 @@
+<div class="navbar">
+    <% if !(yield(:title).empty?) %>
+      <%= yield(:title) %>
+    <% else %>
+      <%= 'Catalog' %>
+    <% end %>
+
+    <%= link_to "Products", products_path, class: "prods" %>
+</div>
